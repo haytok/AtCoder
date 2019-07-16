@@ -1,0 +1,1 @@
+print(sorted([int(element) for element in input().split()])[1])
