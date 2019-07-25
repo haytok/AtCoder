@@ -17,3 +17,8 @@ process.append([max_value, min_value])
 print(max_value - min_value)
 for item in process:
     print(item[0], item[1])
+
+"""
+初めて500点問題を解いたけど、発想が結構重要な問題やった。
+実装できない典型的なアルゴリズム以外の問題やと、解けることもあると感じた。
+"""
