@@ -8,8 +8,8 @@ else:
     dp = [[0, 0, 0] for _ in range(N)]
     dp[0] = inputs[0]
     for i in range(N):
-        dp[i][0] = max(dp[i-1][1] + inputs[i][0], dp[i-1][2] + inputs[i][0])
-        dp[i][1] = max(dp[i-1][2] + inputs[i][1], dp[i-1][0] + inputs[i][1])
-        dp[i][2] = max(dp[i-1][0] + inputs[i][2], dp[i-1][1] + inputs[i][2])
+        dp[i][0] = max(dp[i-1][1], dp[i-1][2]) + inputs[i][0]
+        dp[i][1] = max(dp[i-1][2], dp[i-1][0]) + inputs[i][1]
+        dp[i][2] = max(dp[i-1][0], dp[i-1][1]) + inputs[i][2]
 
     print(max(dp[-1]))
